@@ -20,6 +20,10 @@ import { ConfiguracionComponent } from './componentes/configuracion/configuracio
 import { NoEncontradoComponent } from './componentes/no-encontrado/no-encontrado.component';
 import { PiePaginaComponent } from './componentes/pie-pagina/pie-pagina.component';
 import { ClienteServicio } from './servicios/cliente.service';
+import { LoginService } from './servicios/login.service';
+import { AuthGuard } from './guardianes/auth.guard';
+import { ConfiguracionServicio } from './servicios/configuracion.service';
+import { ConfiguracionGuard } from './guardianes/configuracion.guard';
 
 
 @NgModule({
@@ -44,7 +48,7 @@ import { ClienteServicio } from './servicios/cliente.service';
     FormsModule,
     FlashMessagesModule.forRoot()
   ],
-  providers: [ClienteServicio],
+  providers: [ClienteServicio, LoginService, AuthGuard, ConfiguracionServicio, ConfiguracionGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
