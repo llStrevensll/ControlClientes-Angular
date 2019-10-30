@@ -1,0 +1,117 @@
+<!-- Botones -->
+<!-- py-> padding top and bottom , mb->margin bottom-->
+<section id="actions" class="py-4 mb-4 bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <!-- block->Se estira todo el ancho, el cliente se agregara con una ventana de tipo modal -->
+                <a href="#" class="btn btn-primary btn-block" data-toggle="modal" data-target="#agregarClienteModal">
+                    <i class="fas fa-plus"></i>Agregar Cliente
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Listado Clientes -->
+<section id="clientes">
+    <div class="container">
+        <div class="row">
+            <!-- solo de 9 columnas -->
+            <div class="col-md-9">
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Listado de Clientes</h4>
+                    </div>
+                    <!-- striped resaltar pares / impares -->
+                    <table class="table table-striped">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>#</th>
+                                <th>Nombre</th>
+                                <th>Saldo</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let cliente of clientes; let i = index">
+                                <td>{{i+1}}</td>
+                                <td>{{cliente.nombre}} {{cliente.apellido}}</td>
+                                <td>{{cliente.saldo | currency: 'COL': '$'}}</td>
+                                <td>
+                                    <a routerLink="/cliente/editar/{{cliente.id}}" class="btn btn-secondary">
+                                        <i class="fas fa-angle-double-right"></i>Editar
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- Tarjetas laterales-->
+            <div class="col-md-3">
+                <div class="card text-center bg-danger text-white mb-3">
+                    <div class="card-body">
+                        <h3>Saldo Total</h3>
+                        <h4 class="display-4">
+                            {{getSaldoTotal() | currency:'COL':'$'}}
+                        </h4>
+                    </div>
+                </div>
+
+                <div class="card text-center bg-success text-white mb-3">
+                    <div class="card-body">
+                        <h3>Total Clientes</h3>
+                        <h4 class="display-4">
+                            <!-- ?-> parametro opcional, quedara en blanco sino esta-->
+                            <i class="fas fa-users"></i>{{clientes?.length}}
+                        </h4>
+                    </div>
+                </div>
+            </div>
+            <!-- Fin tarjetas laterales-->
+        </div>
+
+    </div>
+</section>
+
+<!-- Agregar cliente modal-->
+<div class="modal fade" id="agregarClienteModal">
+    <div class="modal-dialog modl-lg">
+        <div class="modal-content">
+            <div class="modal-header bg-info text-white">
+                <h5 class="modal-title">Agregar Cliente</h5>
+                <button class="close" data-dismiss="modal">
+                    <span>&times;</span>
+                </button>
+            </div>
+
+            <form>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" name="nombre" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="apellido">Apellido</label>
+                        <input type="text" name="apellido" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="saldo">Saldo </label>
+                        <input type="number" name="saldo" class="form-control">
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type=submit class="btn btn-primary">Guardar</button>
+                </div>
+            </form>
+        </div>
+
+
+    </div>
+</div>
