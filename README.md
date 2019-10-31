@@ -39,9 +39,33 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ***App***
 <p align="center">
-  <img src="https://github.com/llStrevensll/listado-personas-Angular/blob/master/images-git/listadopersonas1.PNG?raw=true" alt="listadopersonas1"/>
+  <img src="https://github.com/llStrevensll/ControlClientes-Angular/blob/master/images-git/app1.PNG?raw=true" alt="controlclientes1"/>
 </p>
 
 <p align="center">
-  <img src="https://github.com/llStrevensll/listado-personas-Angular/blob/master/images-git/listadopersonas2.PNG?raw=true" alt="listadopersonas2"/>
+  <img src="https://github.com/llStrevensll/ControlClientes-Angular/blob/master/images-git/app2.PNG?raw=true" alt="controlclientes2"/>
+</p>
+
+<p align="center">
+  <img src="https://github.com/llStrevensll/ControlClientes-Angular/blob/master/images-git/app3.PNG?raw=true" alt="controlclientes3"/>
+</p>
+
+<p align="center">
+  <img src="https://github.com/llStrevensll/ControlClientes-Angular/blob/master/images-git/app4.PNG?raw=true" alt="controlclientes4"/>
+</p>
+
+<p align="center">
+  <img src="https://github.com/llStrevensll/ControlClientes-Angular/blob/master/images-git/app5.PNG?raw=true" alt="controlclientes5"/>
+</p>
+
+<p align="center">
+  <img src="https://github.com/llStrevensll/ControlClientes-Angular/blob/master/images-git/app6.PNG?raw=true" alt="controlclientes6"/>
+</p>
+
+<p align="center">
+  <img src="https://github.com/llStrevensll/ControlClientes-Angular/blob/master/images-git/app7.PNG?raw=true" alt="controlclientes7"/>
+</p>
+
+<p align="center">
+  <img src="https://github.com/llStrevensll/ControlClientes-Angular/blob/master/images-git/app8.PNG?raw=true" alt="controlclientes8"/>
 </p>
